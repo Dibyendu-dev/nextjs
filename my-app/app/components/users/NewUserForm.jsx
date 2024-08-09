@@ -1,6 +1,15 @@
 export default function NewUserForm() {
+
+    const addUser = async (formData)=>{
+        "use server";
+
+        console.log(formData.get('name'));
+        console.log(formData.get('email'));
+
+    }
+
     return (
-        <form >
+        <form action={addUser} >
             <div>
                 <input type="text" name="name" placeholder="Name" />
             </div>
